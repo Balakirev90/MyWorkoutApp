@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		137B38E629A4F23C00AD07E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B38E529A4F23C00AD07E3 /* AppDelegate.swift */; };
 		137B38E829A4F23C00AD07E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B38E729A4F23C00AD07E3 /* SceneDelegate.swift */; };
-		137B38EA29A4F23C00AD07E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B38E929A4F23C00AD07E3 /* ViewController.swift */; };
-		137B38ED29A4F23C00AD07E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 137B38EB29A4F23C00AD07E3 /* Main.storyboard */; };
+		137B38EA29A4F23C00AD07E3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B38E929A4F23C00AD07E3 /* MainViewController.swift */; };
 		137B38EF29A4F23D00AD07E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 137B38EE29A4F23D00AD07E3 /* Assets.xcassets */; };
 		137B38F229A4F23D00AD07E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 137B38F029A4F23D00AD07E3 /* LaunchScreen.storyboard */; };
+		137B390029A4F79000AD07E3 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B38FF29A4F79000AD07E3 /* Resources.swift */; };
+		137B390329A4F7B800AD07E3 /* UIview + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B390229A4F7B800AD07E3 /* UIview + Extension.swift */; };
+		137B390529A4F81B00AD07E3 /* UIcolor + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B390429A4F81B00AD07E3 /* UIcolor + extension.swift */; };
+		137B390729A4FB8500AD07E3 /* MainTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B390629A4FB8500AD07E3 /* MainTopView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		137B38E229A4F23C00AD07E3 /* MyWorkoutApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWorkoutApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		137B38E529A4F23C00AD07E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		137B38E729A4F23C00AD07E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		137B38E929A4F23C00AD07E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		137B38EC29A4F23C00AD07E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		137B38E929A4F23C00AD07E3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		137B38EE29A4F23D00AD07E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		137B38F129A4F23D00AD07E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		137B38F329A4F23D00AD07E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		137B38FF29A4F79000AD07E3 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		137B390229A4F7B800AD07E3 /* UIview + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIview + Extension.swift"; sourceTree = "<group>"; };
+		137B390429A4F81B00AD07E3 /* UIcolor + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIcolor + extension.swift"; sourceTree = "<group>"; };
+		137B390629A4FB8500AD07E3 /* MainTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTopView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,74 @@
 		137B38E429A4F23C00AD07E3 /* MyWorkoutApp */ = {
 			isa = PBXGroup;
 			children = (
+				137B390129A4F7A100AD07E3 /* Extensions */,
+				137B38FA29A4F55300AD07E3 /* Application */,
+				137B38F929A4F54600AD07E3 /* Helpers */,
+				137B38FB29A4F59F00AD07E3 /* Main */,
+				137B38FC29A4F5B400AD07E3 /* SupportingFiles */,
+			);
+			path = MyWorkoutApp;
+			sourceTree = "<group>";
+		};
+		137B38F929A4F54600AD07E3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				137B38FF29A4F79000AD07E3 /* Resources.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		137B38FA29A4F55300AD07E3 /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				137B38E529A4F23C00AD07E3 /* AppDelegate.swift */,
 				137B38E729A4F23C00AD07E3 /* SceneDelegate.swift */,
-				137B38E929A4F23C00AD07E3 /* ViewController.swift */,
-				137B38EB29A4F23C00AD07E3 /* Main.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		137B38FB29A4F59F00AD07E3 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				137B38FE29A4F5FE00AD07E3 /* Views */,
+				137B38FD29A4F5EF00AD07E3 /* ViewControllers */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		137B38FC29A4F5B400AD07E3 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
 				137B38EE29A4F23D00AD07E3 /* Assets.xcassets */,
 				137B38F029A4F23D00AD07E3 /* LaunchScreen.storyboard */,
 				137B38F329A4F23D00AD07E3 /* Info.plist */,
 			);
-			path = MyWorkoutApp;
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		137B38FD29A4F5EF00AD07E3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				137B38E929A4F23C00AD07E3 /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		137B38FE29A4F5FE00AD07E3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				137B390629A4FB8500AD07E3 /* MainTopView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		137B390129A4F7A100AD07E3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				137B390229A4F7B800AD07E3 /* UIview + Extension.swift */,
+				137B390429A4F81B00AD07E3 /* UIcolor + extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +192,6 @@
 			files = (
 				137B38F229A4F23D00AD07E3 /* LaunchScreen.storyboard in Resources */,
 				137B38EF29A4F23D00AD07E3 /* Assets.xcassets in Resources */,
-				137B38ED29A4F23C00AD07E3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +202,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				137B38EA29A4F23C00AD07E3 /* ViewController.swift in Sources */,
+				137B38EA29A4F23C00AD07E3 /* MainViewController.swift in Sources */,
+				137B390529A4F81B00AD07E3 /* UIcolor + extension.swift in Sources */,
+				137B390029A4F79000AD07E3 /* Resources.swift in Sources */,
 				137B38E629A4F23C00AD07E3 /* AppDelegate.swift in Sources */,
+				137B390329A4F7B800AD07E3 /* UIview + Extension.swift in Sources */,
+				137B390729A4FB8500AD07E3 /* MainTopView.swift in Sources */,
 				137B38E829A4F23C00AD07E3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +215,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		137B38EB29A4F23C00AD07E3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				137B38EC29A4F23C00AD07E3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		137B38F029A4F23D00AD07E3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -288,12 +348,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyWorkoutApp/Info.plist;
+				INFOPLIST_FILE = MyWorkoutApp/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,9 +361,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = balakirev.MyWorkoutApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,12 +378,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyWorkoutApp/Info.plist;
+				INFOPLIST_FILE = MyWorkoutApp/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,9 +391,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = balakirev.MyWorkoutApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
