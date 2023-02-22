@@ -27,8 +27,12 @@ class MainViewController: UIViewController {
                                        bottom: 0,
                                        right: 0)
         button.titleLabel?.font = .systemFont(ofSize: 12)
+        button.addTarget(self, action: #selector(addWorkoutButtonTapped), for: .touchUpInside)
         return button
     }()
+    
+    private let weatherView = WeatherView()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +44,11 @@ class MainViewController: UIViewController {
         view.backgroundColor = Resources.Colors.backgroundVC
         view.setView(topView)
         view.setView(addWorkoutButton)
+        view.setView(weatherView)
+    }
+    
+    @objc private func addWorkoutButtonTapped() {
+        print("addWorkoutButtonTapped")
     }
     
 }
@@ -53,10 +62,15 @@ extension MainViewController {
             topView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             topView.heightAnchor.constraint(equalToConstant: 120),
             
-            addWorkoutButton.topAnchor.constraint(equalTo: topView.bottomAnchor, constant: 8),
+            addWorkoutButton.topAnchor.constraint(equalTo: topView.bottomAnchor, constant: 10),
             addWorkoutButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             addWorkoutButton.heightAnchor.constraint(equalToConstant: 80),
-            addWorkoutButton.widthAnchor.constraint(equalToConstant: 80)
+            addWorkoutButton.widthAnchor.constraint(equalToConstant: 80),
+            
+            weatherView.leadingAnchor.constraint(equalTo: addWorkoutButton.trailingAnchor, constant: 10),
+            weatherView.topAnchor.constraint(equalTo: topView.bottomAnchor, constant: 10),
+            weatherView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            weatherView.heightAnchor.constraint(equalToConstant: 80)
         ])
     }
 }

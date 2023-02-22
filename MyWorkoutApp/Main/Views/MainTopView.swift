@@ -12,7 +12,7 @@ class MainTopView: UIView {
     private let userPhotoImageView: UIImageView = {
         let view = UIImageView()
         view.backgroundColor = Resources.Colors.userPhoto
-        view.layer.borderColor = UIColor.white.cgColor
+        view.layer.borderColor = Resources.Colors.whiteColor.cgColor
         view.layer.borderWidth = 5
         return view
     }()
@@ -26,8 +26,10 @@ class MainTopView: UIView {
     
     private let userNameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Your name"
+        label.text = "Mikhail Balakirev"
         label.textColor = .black
+        label.adjustsFontSizeToFitWidth = true
+        label.minimumScaleFactor = 0.7
         return label
     }()
     
@@ -68,6 +70,7 @@ extension MainTopView {
             userNameLabel.leadingAnchor.constraint(equalTo: userPhotoImageView.trailingAnchor, constant: 10),
             userNameLabel.bottomAnchor.constraint(equalTo: calendarView.topAnchor, constant: -10),
             userNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+        
         ])
     }
 }
