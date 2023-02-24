@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13258AD929A907B500ADC59A /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13258AD729A907B500ADC59A /* Roboto-Bold.ttf */; };
+		13258ADA29A907B500ADC59A /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13258AD829A907B500ADC59A /* Roboto-Medium.ttf */; };
+		13258ADE29A9081000ADC59A /* UIColor + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13258ADB29A9081000ADC59A /* UIColor + Extensions.swift */; };
+		13258ADF29A9081000ADC59A /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13258ADC29A9081000ADC59A /* UIView + Extensions.swift */; };
+		13258AE029A9081000ADC59A /* UIFont + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13258ADD29A9081000ADC59A /* UIFont + Extensions.swift */; };
+		13258AE329A90DB800ADC59A /* CalendarCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13258AE229A90DB800ADC59A /* CalendarCollectionView.swift */; };
+		13258AE529A90ED800ADC59A /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13258AE429A90ED800ADC59A /* CalendarCollectionViewCell.swift */; };
 		1347C13529A5D63C007E0622 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1347C13429A5D63C007E0622 /* WeatherView.swift */; };
 		137B38E629A4F23C00AD07E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B38E529A4F23C00AD07E3 /* AppDelegate.swift */; };
 		137B38E829A4F23C00AD07E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B38E729A4F23C00AD07E3 /* SceneDelegate.swift */; };
@@ -15,11 +22,17 @@
 		137B38F229A4F23D00AD07E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 137B38F029A4F23D00AD07E3 /* LaunchScreen.storyboard */; };
 		137B390029A4F79000AD07E3 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B38FF29A4F79000AD07E3 /* Resources.swift */; };
 		137B390329A4F7B800AD07E3 /* UIview + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B390229A4F7B800AD07E3 /* UIview + Extension.swift */; };
-		137B390529A4F81B00AD07E3 /* UIcolor + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B390429A4F81B00AD07E3 /* UIcolor + extension.swift */; };
 		137B390729A4FB8500AD07E3 /* MainTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B390629A4FB8500AD07E3 /* MainTopView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13258AD729A907B500ADC59A /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		13258AD829A907B500ADC59A /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		13258ADB29A9081000ADC59A /* UIColor + Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor + Extensions.swift"; sourceTree = "<group>"; };
+		13258ADC29A9081000ADC59A /* UIView + Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
+		13258ADD29A9081000ADC59A /* UIFont + Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont + Extensions.swift"; sourceTree = "<group>"; };
+		13258AE229A90DB800ADC59A /* CalendarCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionView.swift; sourceTree = "<group>"; };
+		13258AE429A90ED800ADC59A /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		1347C13429A5D63C007E0622 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		137B38E229A4F23C00AD07E3 /* MyWorkoutApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWorkoutApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		137B38E529A4F23C00AD07E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -30,7 +43,6 @@
 		137B38F329A4F23D00AD07E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		137B38FF29A4F79000AD07E3 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		137B390229A4F7B800AD07E3 /* UIview + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIview + Extension.swift"; sourceTree = "<group>"; };
-		137B390429A4F81B00AD07E3 /* UIcolor + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIcolor + extension.swift"; sourceTree = "<group>"; };
 		137B390629A4FB8500AD07E3 /* MainTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTopView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -45,6 +57,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13258AE129A908B400ADC59A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				13258AD729A907B500ADC59A /* Roboto-Bold.ttf */,
+				13258AD829A907B500ADC59A /* Roboto-Medium.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		13258AE629A9106D00ADC59A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				13258AE429A90ED800ADC59A /* CalendarCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		137B38D929A4F23C00AD07E3 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +134,7 @@
 				137B38EE29A4F23D00AD07E3 /* Assets.xcassets */,
 				137B38F029A4F23D00AD07E3 /* LaunchScreen.storyboard */,
 				137B38F329A4F23D00AD07E3 /* Info.plist */,
+				13258AE129A908B400ADC59A /* Fonts */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -120,8 +150,10 @@
 		137B38FE29A4F5FE00AD07E3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				13258AE629A9106D00ADC59A /* Cells */,
 				137B390629A4FB8500AD07E3 /* MainTopView.swift */,
 				1347C13429A5D63C007E0622 /* WeatherView.swift */,
+				13258AE229A90DB800ADC59A /* CalendarCollectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -130,7 +162,9 @@
 			isa = PBXGroup;
 			children = (
 				137B390229A4F7B800AD07E3 /* UIview + Extension.swift */,
-				137B390429A4F81B00AD07E3 /* UIcolor + extension.swift */,
+				13258ADB29A9081000ADC59A /* UIColor + Extensions.swift */,
+				13258ADD29A9081000ADC59A /* UIFont + Extensions.swift */,
+				13258ADC29A9081000ADC59A /* UIView + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -193,8 +227,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13258ADA29A907B500ADC59A /* Roboto-Medium.ttf in Resources */,
 				137B38F229A4F23D00AD07E3 /* LaunchScreen.storyboard in Resources */,
 				137B38EF29A4F23D00AD07E3 /* Assets.xcassets in Resources */,
+				13258AD929A907B500ADC59A /* Roboto-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,14 +241,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13258AE529A90ED800ADC59A /* CalendarCollectionViewCell.swift in Sources */,
+				13258ADF29A9081000ADC59A /* UIView + Extensions.swift in Sources */,
 				137B38EA29A4F23C00AD07E3 /* MainViewController.swift in Sources */,
-				137B390529A4F81B00AD07E3 /* UIcolor + extension.swift in Sources */,
 				137B390029A4F79000AD07E3 /* Resources.swift in Sources */,
 				137B38E629A4F23C00AD07E3 /* AppDelegate.swift in Sources */,
+				13258AE029A9081000ADC59A /* UIFont + Extensions.swift in Sources */,
 				137B390329A4F7B800AD07E3 /* UIview + Extension.swift in Sources */,
 				137B390729A4FB8500AD07E3 /* MainTopView.swift in Sources */,
+				13258ADE29A9081000ADC59A /* UIColor + Extensions.swift in Sources */,
 				137B38E829A4F23C00AD07E3 /* SceneDelegate.swift in Sources */,
 				1347C13529A5D63C007E0622 /* WeatherView.swift in Sources */,
+				13258AE329A90DB800ADC59A /* CalendarCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

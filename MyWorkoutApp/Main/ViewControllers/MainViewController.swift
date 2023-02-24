@@ -14,10 +14,11 @@ class MainViewController: UIViewController {
     private lazy var addWorkoutButton: UIButton = {
         let button = UIButton(type: .system)
         button.layer.cornerRadius = 10
-        button.backgroundColor = Resources.Colors.workoutButton
-        button.tintColor = Resources.Colors.workoutButtonTint
+        button.backgroundColor = .specialYellow
+        button.tintColor = .specialDarkGreen
         button.setTitle("Add workout", for: .normal)
         button.setImage(Resources.Image.plusImage, for: .normal)
+        button.titleLabel?.font = .robotoMedium12()
         button.imageEdgeInsets = .init(top: 0,
                                        left: 20,
                                        bottom: 15,
@@ -27,13 +28,13 @@ class MainViewController: UIViewController {
                                        bottom: 0,
                                        right: 0)
         button.titleLabel?.font = .systemFont(ofSize: 12)
+        button.addShadowOnView()
         button.addTarget(self, action: #selector(addWorkoutButtonTapped), for: .touchUpInside)
         return button
     }()
     
     private let weatherView = WeatherView()
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -41,7 +42,7 @@ class MainViewController: UIViewController {
     }
     
     private func setupViews() {
-        view.backgroundColor = Resources.Colors.backgroundVC
+        view.backgroundColor = .specialBackground
         view.setView(topView)
         view.setView(addWorkoutButton)
         view.setView(weatherView)

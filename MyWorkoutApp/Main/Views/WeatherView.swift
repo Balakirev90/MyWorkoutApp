@@ -18,7 +18,8 @@ class WeatherView: UIView {
     private let weatherLabel: UILabel = {
         let label = UILabel()
         label.text = "Солнечно"
-        label.textColor = .black
+        label.textColor = .specialGray
+        label.font = .robotoMedium18()
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.7
         return label
@@ -27,18 +28,19 @@ class WeatherView: UIView {
     private let weatherDescriptionLabel: UILabel = {
         let label = UILabel()
         label.text = "Хорошая погода, чтобы позаниматься на улице"
-        label.textColor = .lightGray
+        label.textColor = .specialGray
+        label.font = .robotoMedium14()
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.5
         label.numberOfLines = 0
         return label
     }()
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
         setConstraints()
-        
+        addShadowOnView()
     }
     
 
@@ -50,7 +52,7 @@ class WeatherView: UIView {
         setView(wheaterImageView)
         setView(weatherLabel)
         setView(weatherDescriptionLabel)
-        backgroundColor = Resources.Colors.whiteColor
+        backgroundColor = .white
         layer.cornerRadius = 10
     }
     }
@@ -71,7 +73,6 @@ class WeatherView: UIView {
             weatherDescriptionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             weatherDescriptionLabel.trailingAnchor.constraint(equalTo: wheaterImageView.leadingAnchor, constant: -10),
             weatherDescriptionLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
-            
         ])
     }
 

@@ -9,17 +9,19 @@ import UIKit
 
 class MainTopView: UIView {
     
+    private let calendarCollection = CalendarCollectionView()
+    
     private let userPhotoImageView: UIImageView = {
         let view = UIImageView()
-        view.backgroundColor = Resources.Colors.userPhoto
-        view.layer.borderColor = Resources.Colors.whiteColor.cgColor
+        view.backgroundColor = .specialLine
+        view.layer.borderColor = UIColor.white.cgColor
         view.layer.borderWidth = 5
         return view
     }()
     
     private let calendarView: UIView = {
         let view = UIView()
-        view.backgroundColor = Resources.Colors.calendarView
+        view.backgroundColor = .specialGreen
         view.layer.cornerRadius = 10
         return view
     }()
@@ -27,9 +29,10 @@ class MainTopView: UIView {
     private let userNameLabel: UILabel = {
         let label = UILabel()
         label.text = "Mikhail Balakirev"
-        label.textColor = .black
+        label.textColor = .specialGray
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.7
+        label.font = .robotoMedium24()
         return label
     }()
     
@@ -51,6 +54,7 @@ class MainTopView: UIView {
         setView(calendarView)
         setView(userPhotoImageView)
         setView(userNameLabel)
+        calendarView.setView(calendarCollection)
     }
 }
 
@@ -66,6 +70,11 @@ extension MainTopView {
             calendarView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
             calendarView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
             calendarView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
+            
+            calendarCollection.topAnchor.constraint(equalTo: calendarView.topAnchor, constant: 5),
+            calendarCollection.trailingAnchor.constraint(equalTo: calendarView.trailingAnchor, constant: -10),
+            calendarCollection.leadingAnchor.constraint(equalTo: calendarView.leadingAnchor, constant: 105),
+            calendarCollection.bottomAnchor.constraint(equalTo: calendarView.bottomAnchor, constant: -5),
             
             userNameLabel.leadingAnchor.constraint(equalTo: userPhotoImageView.trailingAnchor, constant: 10),
             userNameLabel.bottomAnchor.constraint(equalTo: calendarView.topAnchor, constant: -10),
