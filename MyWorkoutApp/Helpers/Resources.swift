@@ -13,5 +13,6 @@ enum Resources {
     enum Image {
         static let plusImage = UIImage(named: "plus")
         static let sunnyImage = UIImage(named: "sun")
+        static let testWorkout = UIImage(named: "testworkout")
     }
 }

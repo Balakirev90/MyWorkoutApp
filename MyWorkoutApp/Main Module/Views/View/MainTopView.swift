@@ -36,6 +36,8 @@ class MainTopView: UIView {
         return label
     }()
     
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -79,7 +81,6 @@ extension MainTopView {
             userNameLabel.leadingAnchor.constraint(equalTo: userPhotoImageView.trailingAnchor, constant: 10),
             userNameLabel.bottomAnchor.constraint(equalTo: calendarView.topAnchor, constant: -10),
             userNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
-        
         ])
     }
 }

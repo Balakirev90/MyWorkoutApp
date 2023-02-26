@@ -21,8 +21,6 @@ class CalendarCollectionView: UICollectionView {
         register(CalendarCollectionViewCell.self, forCellWithReuseIdentifier: idCalendarCell)
     }
     
-    
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -50,12 +48,12 @@ extension CalendarCollectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: idCalendarCell, for: indexPath) as? CalendarCollectionViewCell else {
             return UICollectionViewCell() }
-        cell.backgroundColor = .red
+        
         return cell
     }
-    
-    
 }
+
+//Mark: - UICollectionViewDelegateFlowLayout
 
 extension CalendarCollectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -64,8 +62,11 @@ extension CalendarCollectionView: UICollectionViewDelegateFlowLayout {
     }
 }
 
+//Mark: - UICollectionViewDelegate
+
 extension CalendarCollectionView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("\(indexPath)")
+
     }
 }

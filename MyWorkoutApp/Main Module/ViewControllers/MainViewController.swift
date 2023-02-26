@@ -11,6 +11,10 @@ class MainViewController: UIViewController {
     
     private let topView = MainTopView()
     
+    private let workoutTodayLabel = UILabel(text: "Workout Today")
+    
+    private let mainTableView = MainTableView()
+    
     private lazy var addWorkoutButton: UIButton = {
         let button = UIButton(type: .system)
         button.layer.cornerRadius = 10
@@ -27,7 +31,6 @@ class MainViewController: UIViewController {
                                        left: -40,
                                        bottom: 0,
                                        right: 0)
-        button.titleLabel?.font = .systemFont(ofSize: 12)
         button.addShadowOnView()
         button.addTarget(self, action: #selector(addWorkoutButtonTapped), for: .touchUpInside)
         return button
@@ -46,7 +49,11 @@ class MainViewController: UIViewController {
         view.setView(topView)
         view.setView(addWorkoutButton)
         view.setView(weatherView)
+        view.setView(workoutTodayLabel)
+        view.setView(mainTableView)
     }
+    
+  
     
     @objc private func addWorkoutButtonTapped() {
         print("addWorkoutButtonTapped")
@@ -71,7 +78,16 @@ extension MainViewController {
             weatherView.leadingAnchor.constraint(equalTo: addWorkoutButton.trailingAnchor, constant: 10),
             weatherView.topAnchor.constraint(equalTo: topView.bottomAnchor, constant: 10),
             weatherView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            weatherView.heightAnchor.constraint(equalToConstant: 80)
+            weatherView.heightAnchor.constraint(equalToConstant: 80),
+            
+            workoutTodayLabel.topAnchor.constraint(equalTo: addWorkoutButton.bottomAnchor, constant: 10),
+            workoutTodayLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            workoutTodayLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor , constant: 10),
+            
+            mainTableView.topAnchor.constraint(equalTo: workoutTodayLabel.bottomAnchor, constant: 5),
+            mainTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            mainTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            mainTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
         ])
     }
 }

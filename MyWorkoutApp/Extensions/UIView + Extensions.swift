@@ -15,4 +15,9 @@ extension UIView {
         layer.shadowOpacity = 0.7
         layer.shadowRadius = 1.0
     }
+    
+    func setView(_ view: UIView) {
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+    }
 }
