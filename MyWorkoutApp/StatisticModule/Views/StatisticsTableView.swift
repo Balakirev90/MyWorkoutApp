@@ -54,6 +54,6 @@ extension StatisticsTableView: UITableViewDataSource {
 
 extension StatisticsTableView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        80
+        60
     }
 }

@@ -9,12 +9,21 @@ import UIKit
 
 extension UILabel {
     
-    convenience init (text: String) {
+    convenience init (textSize14: String) {
         self.init()
-        self.text = text
+        self.text = textSize14
         translatesAutoresizingMaskIntoConstraints = false
         font = .robotoMedium14()
         textColor = .specialLightBrown
+    }
+    
+    convenience init (textSize18: String) {
+        self.init()
+        self.text = textSize18
+        translatesAutoresizingMaskIntoConstraints = false
+        font = .robotoMedium18()
+        textColor = .specialGray
+        
     }
     
 }

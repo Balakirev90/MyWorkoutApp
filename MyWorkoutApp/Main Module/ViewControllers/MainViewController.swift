@@ -11,7 +11,7 @@ class MainViewController: UIViewController {
     
     private let topView = MainTopView()
     
-    private let workoutTodayLabel = UILabel(text: "Workout Today")
+    private let workoutTodayLabel = UILabel(textSize14: "Workout Today")
     
     private let mainTableView = MainTableView()
     
@@ -56,7 +56,9 @@ class MainViewController: UIViewController {
   
     
     @objc private func addWorkoutButtonTapped() {
-        print("addWorkoutButtonTapped")
+        let newWorkoutVC = NewWorkoutViewController()
+        newWorkoutVC.modalPresentationStyle = .fullScreen
+        present(newWorkoutVC, animated: true)
     }
     
 }

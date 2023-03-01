@@ -19,8 +19,8 @@ class StatisticsTableViewCell: UITableViewCell {
         return label
     }()
     
-    private let beforeLabel = UILabel(text: "Before: 18")
-    private let nowLabel = UILabel(text: "now: 20")
+    private let beforeLabel = UILabel(textSize14: "Before: 18")
+    private let nowLabel = UILabel(textSize14: "now: 20")
     
     private let separatorLineView: UIView = {
         let view = UIView()
@@ -35,6 +35,7 @@ class StatisticsTableViewCell: UITableViewCell {
         label.text = "+2"
         label.font = .robotoMedium24()
         label.textColor = .specialGreen
+        label.textAlignment = .right
         return label
     }()
     
@@ -72,20 +73,24 @@ extension StatisticsTableViewCell {
     
     private func setConstraints() {
         NSLayoutConstraint.activate([
-            separatorLineView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
-            separatorLineView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
+            countReps.centerYAnchor.constraint(equalTo: centerYAnchor),
+            countReps.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            countReps.heightAnchor.constraint(equalToConstant: 80),
+            countReps.widthAnchor.constraint(equalToConstant: 80),
+            
+            exerciseNameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 5),
+            exerciseNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            exerciseNameLabel.trailingAnchor.constraint(equalTo: countReps.leadingAnchor, constant: -10),
+            
+            labelsStackView.topAnchor.constraint(equalTo: exerciseNameLabel.bottomAnchor, constant: 5),
+            labelsStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            
+            separatorLineView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            separatorLineView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             separatorLineView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
             separatorLineView.heightAnchor.constraint(equalToConstant: 1),
             
-            exerciseNameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            exerciseNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
-            exerciseNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             
-            labelsStackView.topAnchor.constraint(equalTo: exerciseNameLabel.bottomAnchor, constant: 10),
-            labelsStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
-            
-            countReps.centerYAnchor.constraint(equalTo: centerYAnchor),
-            countReps.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5)
         ])
     }
 }
