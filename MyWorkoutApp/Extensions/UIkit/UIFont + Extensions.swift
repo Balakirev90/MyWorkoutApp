@@ -9,8 +9,6 @@ import UIKit
 
 extension UIFont {
     
-//    label.font = UIFont(name: "Roboto-Medium", size: 24)
-
     //Medium
     static func robotoMedium12() -> UIFont? {
         return UIFont.init(name: "Roboto-Medium", size: 12)

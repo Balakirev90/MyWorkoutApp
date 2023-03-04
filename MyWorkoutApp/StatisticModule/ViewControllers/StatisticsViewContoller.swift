@@ -31,7 +31,7 @@ class StatisticsViewContoller : UIViewController {
         return segmentControl
     }()
     
-    private let exerciseLabel = UILabel(textSize14: "Exercises")
+    private let exerciseLabel = UILabel(text: "Exercises", font: .robotoMedium14(), textColor: .specialLightBrown)
     
     private let statisticTableView = StatisticsTableView()
     

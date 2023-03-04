@@ -9,9 +9,9 @@ import UIKit
 
 class NameView: UIView {
     
-    let nameLabel = UILabel(textSize14: "Name")
+    private let nameLabel = UILabel(text: "Name", font: .robotoMedium14(), textColor: .specialLightBrown)
     
-    let nameTextField: UITextField = {
+    private let nameTextField: UITextField = {
         let textField = UITextField()
         textField.borderStyle = .none
         textField.layer.cornerRadius = 10
@@ -42,7 +42,7 @@ class NameView: UIView {
     }
     
     private func setupViews() {
-        backgroundColor = .specialBackground
+        backgroundColor = .none
         layer.cornerRadius = 10
     }
 }

@@ -18,12 +18,7 @@ class NewWorkoutViewController : UIViewController {
         return label
     }()
     
-    private lazy var closeButton: UIButton = {
-        let button = UIButton()
-        button.setBackgroundImage(Resources.Image.closeButton, for: .normal)
-        button.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
-        return button
-    }()
+    private lazy var closeButton = CloseButton(type: .system)
     
     private let nameView = NameView()
     
@@ -31,16 +26,9 @@ class NewWorkoutViewController : UIViewController {
     
     private let repsOrTimerView = RepsOrTimerView()
     
-    private lazy var saveButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.layer.cornerRadius = 10
-        button.backgroundColor = .specialGreen
-        button.tintColor = .white
-        button.setTitle("Save", for: .normal)
-        button.titleLabel?.font = .robotoBold16()
-        button.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
-        return button
-    }()
+    private lazy var saveButton = GreenButton(text: "Save")
+    
+    private var stackView = UIStackView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,17 +38,18 @@ class NewWorkoutViewController : UIViewController {
     }
     
     private func setupViews() {
+       
+        stackView = UIStackView(arrangedSubviews: [nameView, dateAndrepeatView, repsOrTimerView], axis: .vertical, spacing: 10)
         view.setView(nameViewCotrollersLabel)
         view.setView(closeButton)
-        view.setView(nameView)
-        view.setView(dateAndrepeatView)
-        view.setView(repsOrTimerView)
+        view.setView(stackView)
         view.setView(saveButton)
-
     }
    
     
     private func configure() {
+        closeButton.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
+        saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
         view.backgroundColor = .specialBackground
         
     }
@@ -87,26 +76,18 @@ extension NewWorkoutViewController {
             closeButton.heightAnchor.constraint(equalToConstant: 35),
             closeButton.widthAnchor.constraint(equalToConstant: 35),
             
-            nameView.topAnchor.constraint(equalTo: nameViewCotrollersLabel.bottomAnchor, constant: 10),
-            nameView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            nameView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            stackView.topAnchor.constraint(equalTo: nameViewCotrollersLabel.bottomAnchor, constant: 10),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            
             nameView.heightAnchor.constraint(equalToConstant: 60),
+            dateAndrepeatView.heightAnchor.constraint(equalToConstant: 115),
+            repsOrTimerView.heightAnchor.constraint(equalToConstant: 340),
             
-            dateAndrepeatView.topAnchor.constraint(equalTo: nameView.bottomAnchor, constant: 10),
-            dateAndrepeatView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            dateAndrepeatView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            dateAndrepeatView.heightAnchor.constraint(equalToConstant: 110),
-            
-            repsOrTimerView.topAnchor.constraint(equalTo: dateAndrepeatView.bottomAnchor, constant: 10),
-            repsOrTimerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            repsOrTimerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            repsOrTimerView.heightAnchor.constraint(equalToConstant: 350),
-            
-            saveButton.topAnchor.constraint(equalTo: repsOrTimerView.bottomAnchor, constant: 25),
+            saveButton.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 25),
             saveButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             saveButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             saveButton.heightAnchor.constraint(equalToConstant: 55)
-    
         ])
       
     }

@@ -11,7 +11,7 @@ class MainViewController: UIViewController {
     
     private let topView = MainTopView()
     
-    private let workoutTodayLabel = UILabel(textSize14: "Workout Today")
+    private let workoutTodayLabel = UILabel(text: "Workout Today", font: .robotoMedium14(), textColor: .specialLightBrown)
     
     private let mainTableView = MainTableView()
     

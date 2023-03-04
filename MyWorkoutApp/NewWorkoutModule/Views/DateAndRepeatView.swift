@@ -9,7 +9,7 @@ import UIKit
 
 class DateAndRepeatView: UIView {
     
-    let dateAndRepeatLabel = UILabel(textSize14: "Date and Repeat")
+    let dateAndRepeatLabel = UILabel(text: "Date and Repeat", font: .robotoMedium14(), textColor: .specialLightBrown)
     
     let backgroundView: UIView = {
         let view = UIView()
@@ -18,9 +18,9 @@ class DateAndRepeatView: UIView {
         return view
     }()
     
-    let dateLabel = UILabel(textSize18: "Date")
-    
-    let repeatLabel = UILabel(textSize18: "Repeat every 7 days")
+    let dateLabel = UILabel(text: "Date", font: .robotoMedium18(), textColor: .specialGray)
+        
+    let repeatLabel = UILabel(text: "Repeat every 7 days", font: .robotoMedium18(), textColor: .specialGray)
     
     private var repeatStackView = UIStackView()
     private var dateStackView = UIStackView()
@@ -58,11 +58,13 @@ class DateAndRepeatView: UIView {
         
         dateStackView = UIStackView(arrangedSubviews: [dateLabel, datePicker], axis: .horizontal, spacing: 10)
         repeatStackView = UIStackView(arrangedSubviews: [repeatLabel, repeatSwitch], axis: .horizontal, spacing: 10)
+        dateStackView.distribution = .equalSpacing
+        repeatStackView.distribution = .equalSpacing
         setView(dateAndRepeatLabel)
         setView(backgroundView)
         setView(dateStackView)
         setView(repeatStackView)
-        backgroundColor = .specialBackground
+        backgroundColor = .none
         layer.cornerRadius = 10
     }
     
@@ -79,13 +81,11 @@ extension DateAndRepeatView {
             dateAndRepeatLabel.topAnchor.constraint(equalTo: topAnchor, constant: 0),
             dateAndRepeatLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 7),
             dateAndRepeatLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -7),
-//            dateAndRepeatLabel.heightAnchor.constraint(equalToConstant: 20),
             
             backgroundView.topAnchor.constraint(equalTo: dateAndRepeatLabel.bottomAnchor, constant: 0),
             backgroundView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
             backgroundView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
             backgroundView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
-//            backgroundView.heightAnchor.constraint(equalToConstant: 100),
             
             dateStackView.topAnchor.constraint(equalTo: backgroundView.topAnchor, constant: 10),
             dateStackView.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor, constant: 10),

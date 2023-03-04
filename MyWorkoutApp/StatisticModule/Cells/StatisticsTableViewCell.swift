@@ -19,8 +19,9 @@ class StatisticsTableViewCell: UITableViewCell {
         return label
     }()
     
-    private let beforeLabel = UILabel(textSize14: "Before: 18")
-    private let nowLabel = UILabel(textSize14: "now: 20")
+
+    private let beforeLabel = UILabel(text: "Before: 18", font: .robotoMedium14(), textColor: .specialLightBrown)
+    private let nowLabel = UILabel(text: "now: 20", font: .robotoMedium14(), textColor: .specialLightBrown)
     
     private let separatorLineView: UIView = {
         let view = UIView()
