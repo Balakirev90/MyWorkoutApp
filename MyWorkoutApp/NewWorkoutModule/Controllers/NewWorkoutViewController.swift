@@ -9,14 +9,7 @@ import UIKit
 
 class NewWorkoutViewController : UIViewController {
     
-    private let nameViewCotrollersLabel: UILabel = {
-        let label = UILabel()
-        label.text = "NEW WORKOUT"
-        label.font = .robotoMedium22()
-        label.textColor = .specialGray
-        label.textAlignment = .center
-        return label
-    }()
+    private let nameViewCotrollersLabel = UILabel(text: "NEW WORKOUT", font: .robotoMedium22(), textColor: .specialGray)
     
     private lazy var closeButton = CloseButton(type: .system)
     
@@ -48,6 +41,7 @@ class NewWorkoutViewController : UIViewController {
    
     
     private func configure() {
+        nameViewCotrollersLabel.textAlignment = .center
         closeButton.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
         saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
         view.backgroundColor = .specialBackground

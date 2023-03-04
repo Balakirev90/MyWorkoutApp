@@ -11,22 +11,7 @@ class NameView: UIView {
     
     private let nameLabel = UILabel(text: "Name", font: .robotoMedium14(), textColor: .specialLightBrown)
     
-    private let nameTextField: UITextField = {
-        let textField = UITextField()
-        textField.borderStyle = .none
-        textField.layer.cornerRadius = 10
-        textField.textColor = .specialGray
-        textField.backgroundColor = .specialBrown
-        textField.leftView = UIView(frame: CGRect(x: 0,
-                                                  y: 0,
-                                                  width: 15,
-                                                  height: 0))
-        textField.font = .robotoBold20()
-        textField.leftViewMode = .always
-        textField.clearButtonMode = .always
-        textField.returnKeyType = .done
-        return textField
-    }()
+    private let nameTextField = BrownTextField()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -59,7 +44,6 @@ class NameView: UIView {
             nameTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
             nameTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
             nameTextField.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0)
-            
         ])
     }
 }

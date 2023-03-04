@@ -11,12 +11,7 @@ class RepsOrTimerView: UIView {
     private let repsOrTimerLabel = UILabel(text: "Reps or timer", font: .robotoMedium14(), textColor: .specialLightBrown)
     private let chooseLabel = UILabel(text: "Choose repeat or timer", font: .robotoMedium14(), textColor: .specialLightBrown)
     
-    private let backgroundView: UIView = {
-            let view = UIView()
-            view.backgroundColor = .specialBrown
-            view.layer.cornerRadius = 10
-            return view
-        }()
+    private let backgroundView = BackgroundView()
     
     private let setsView = SliderView(name: "Sets", minValue: 0, maxValue: 100)
     private let repsView = SliderView(name: "Reps", minValue: 0, maxValue: 50)
@@ -28,7 +23,7 @@ class RepsOrTimerView: UIView {
         setupViews()
         configure()
         setConstraints()
-        
+
     }
     
     private var stackView = UIStackView()
@@ -72,7 +67,6 @@ class RepsOrTimerView: UIView {
             stackView.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor, constant: -20)
         ])
     }
-
 }
 
 

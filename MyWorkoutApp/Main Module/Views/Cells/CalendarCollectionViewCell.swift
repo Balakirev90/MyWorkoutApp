@@ -9,23 +9,9 @@ import UIKit
 
 class CalendarCollectionViewCell: UICollectionViewCell {
     
-    private let numberOfWeeklabel: UILabel = {
-        let label = UILabel()
-        label.text = "20"
-        label.textColor = .white
-        label.textAlignment = .center
-        label.font = .robotoBold20()
-        return label
-    }()
+    private let numberOfWeeklabel = UILabel(text: "20", font: .robotoBold20(), textColor: .white)
     
-    private let dayOfWeeklabel: UILabel = {
-        let label = UILabel()
-        label.text = "WE"
-        label.textColor = .white
-        label.textAlignment = .center
-        label.font = .robotoBold16()
-        return label
-    }()
+    private let dayOfWeeklabel = UILabel(text: "WE", font: .robotoBold16(), textColor: .white)
     
     override var isSelected: Bool {
         didSet {
@@ -55,6 +41,8 @@ class CalendarCollectionViewCell: UICollectionViewCell {
         layer.cornerRadius = 10
         setView(numberOfWeeklabel)
         setView(dayOfWeeklabel)
+        numberOfWeeklabel.textAlignment = .center
+        dayOfWeeklabel.textAlignment = .center
     }
     
 }

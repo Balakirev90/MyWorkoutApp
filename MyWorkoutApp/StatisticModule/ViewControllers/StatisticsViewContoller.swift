@@ -9,14 +9,7 @@ import UIKit
 
 class StatisticsViewContoller : UIViewController {
     
-    private let nameViewCotrollersLabel: UILabel = {
-        let label = UILabel()
-        label.text = "STATISTICS"
-        label.font = .robotoMedium22()
-        label.textColor = .specialGray
-        label.textAlignment = .center
-        return label
-    }()
+    private let nameViewCotrollersLabel = UILabel(text: "STATISTICS", font: .robotoMedium22(), textColor: .specialGray)
     
     private lazy var statiscticSegmentControl: UISegmentedControl = {
         let segmentControl = UISegmentedControl(items: ["Week", "Month"])
@@ -48,6 +41,7 @@ class StatisticsViewContoller : UIViewController {
         view.setView(statisticTableView)
         view.backgroundColor = .specialBackground
         view.setView(statiscticSegmentControl)
+        nameViewCotrollersLabel.textAlignment = .center
     }
 }
 

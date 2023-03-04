@@ -35,6 +35,8 @@
 		137B38F229A4F23D00AD07E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 137B38F029A4F23D00AD07E3 /* LaunchScreen.storyboard */; };
 		137B390029A4F79000AD07E3 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B38FF29A4F79000AD07E3 /* Resources.swift */; };
 		137B390729A4FB8500AD07E3 /* MainTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B390629A4FB8500AD07E3 /* MainTopView.swift */; };
+		138728A129B36563001BE654 /* BrownTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138728A029B36563001BE654 /* BrownTextField.swift */; };
+		138728A329B3671A001BE654 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138728A229B3671A001BE654 /* BackgroundView.swift */; };
 		1394FBD029B315AE00A7A036 /* GreenSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1394FBCF29B315AE00A7A036 /* GreenSlider.swift */; };
 		1394FBD229B316DD00A7A036 /* GreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1394FBD129B316DD00A7A036 /* GreenButton.swift */; };
 		1394FBD429B31C3500A7A036 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1394FBD329B31C3500A7A036 /* CloseButton.swift */; };
@@ -71,6 +73,8 @@
 		137B38F329A4F23D00AD07E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		137B38FF29A4F79000AD07E3 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		137B390629A4FB8500AD07E3 /* MainTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTopView.swift; sourceTree = "<group>"; };
+		138728A029B36563001BE654 /* BrownTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrownTextField.swift; sourceTree = "<group>"; };
+		138728A229B3671A001BE654 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		1394FBCF29B315AE00A7A036 /* GreenSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenSlider.swift; sourceTree = "<group>"; };
 		1394FBD129B316DD00A7A036 /* GreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenButton.swift; sourceTree = "<group>"; };
 		1394FBD329B31C3500A7A036 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
@@ -286,6 +290,8 @@
 				1394FBCF29B315AE00A7A036 /* GreenSlider.swift */,
 				1394FBD129B316DD00A7A036 /* GreenButton.swift */,
 				1394FBD329B31C3500A7A036 /* CloseButton.swift */,
+				138728A029B36563001BE654 /* BrownTextField.swift */,
+				138728A229B3671A001BE654 /* BackgroundView.swift */,
 			);
 			path = Unique;
 			sourceTree = "<group>";
@@ -379,6 +385,7 @@
 				1350959529AF0FB100FB12E6 /* NameView.swift in Sources */,
 				1394FBD429B31C3500A7A036 /* CloseButton.swift in Sources */,
 				1326EC3A29AB4718002C91FF /* StatisticsViewContoller.swift in Sources */,
+				138728A329B3671A001BE654 /* BackgroundView.swift in Sources */,
 				1350959929AF27DC00FB12E6 /* RepsOrTimerView.swift in Sources */,
 				132BA58029A9E17700CCAA50 /* WorkoutTableViewCell.swift in Sources */,
 				13258AE529A90ED800ADC59A /* CalendarCollectionViewCell.swift in Sources */,
@@ -390,6 +397,7 @@
 				1350959B29AF2C6300FB12E6 /* SliderView.swift in Sources */,
 				1350959329AF0C7E00FB12E6 /* NewWorkoutViewController.swift in Sources */,
 				132BA58229A9E4C100CCAA50 /* UILabel + Extensions .swift in Sources */,
+				138728A129B36563001BE654 /* BrownTextField.swift in Sources */,
 				137B38E629A4F23C00AD07E3 /* AppDelegate.swift in Sources */,
 				1394FBD029B315AE00A7A036 /* GreenSlider.swift in Sources */,
 				1394FBD229B316DD00A7A036 /* GreenButton.swift in Sources */,

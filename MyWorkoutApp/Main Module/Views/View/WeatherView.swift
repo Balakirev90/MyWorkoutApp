@@ -15,26 +15,9 @@ class WeatherView: UIView {
         return view
     }()
 
-    private let weatherLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Солнечно"
-        label.textColor = .specialGray
-        label.font = .robotoMedium18()
-        label.adjustsFontSizeToFitWidth = true
-        label.minimumScaleFactor = 0.7
-        return label
-    }()
+    private let weatherLabel = UILabel(text: "Солнечно", font: .robotoMedium18(), textColor: .specialGray)
     
-    private let weatherDescriptionLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Хорошая погода, чтобы позаниматься на улице"
-        label.textColor = .specialLine
-        label.font = .robotoMedium14()
-        label.adjustsFontSizeToFitWidth = true
-        label.minimumScaleFactor = 0.5
-        label.numberOfLines = 0
-        return label
-    }()
+    private let weatherDescriptionLabel = UILabel(text: "Хорошая погода, чтобы позаниматься на улице", font: .robotoMedium14(), textColor: .specialLine)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -54,6 +37,7 @@ class WeatherView: UIView {
         setView(weatherDescriptionLabel)
         backgroundColor = .white
         layer.cornerRadius = 10
+        weatherDescriptionLabel.numberOfLines = 0
     }
     }
 

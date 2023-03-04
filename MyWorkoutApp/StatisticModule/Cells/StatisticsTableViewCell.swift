@@ -11,17 +11,17 @@ class StatisticsTableViewCell: UITableViewCell {
     
     static let idStatisticsTableViewCell = "idStatisticsableViewCell"
     
-    private let exerciseNameLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Biceps"
-        label.font = .robotoMedium24()
-        label.textColor = .specialGray
-        return label
-    }()
+    private let exerciseNameLabel = UILabel(text: "Biceps",
+                                            font: .robotoMedium24(),
+                                            textColor: .specialGray)
     
-
-    private let beforeLabel = UILabel(text: "Before: 18", font: .robotoMedium14(), textColor: .specialLightBrown)
-    private let nowLabel = UILabel(text: "now: 20", font: .robotoMedium14(), textColor: .specialLightBrown)
+    private let beforeLabel = UILabel(text: "Before: 18",
+                                      font: .robotoMedium14(),
+                                      textColor: .specialLightBrown)
+    
+    private let nowLabel = UILabel(text: "now: 20",
+                                   font: .robotoMedium14(),
+                                   textColor: .specialLightBrown)
     
     private let separatorLineView: UIView = {
         let view = UIView()
@@ -31,14 +31,10 @@ class StatisticsTableViewCell: UITableViewCell {
     
     private var labelsStackView = UIStackView()
     
-    private let countReps: UILabel = {
-        let label = UILabel()
-        label.text = "+2"
-        label.font = .robotoMedium24()
-        label.textColor = .specialGreen
-        label.textAlignment = .right
-        return label
-    }()
+    private let countReps = UILabel(text: "+2",
+                                    font: .robotoMedium24(),
+                                    textColor: .specialGreen)
+    
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -64,6 +60,7 @@ class StatisticsTableViewCell: UITableViewCell {
                                       spacing: 10)
         setView(labelsStackView)
         setView(countReps)
+        countReps.textAlignment = .right
         backgroundColor = .clear
         selectionStyle = .none
     }
@@ -89,9 +86,7 @@ extension StatisticsTableViewCell {
             separatorLineView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             separatorLineView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             separatorLineView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
-            separatorLineView.heightAnchor.constraint(equalToConstant: 1),
-            
-            
+            separatorLineView.heightAnchor.constraint(equalToConstant: 1)
         ])
     }
 }

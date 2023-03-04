@@ -26,17 +26,7 @@ class MainTopView: UIView {
         return view
     }()
     
-    private let userNameLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Mikhail Balakirev"
-        label.textColor = .specialGray
-        label.adjustsFontSizeToFitWidth = true
-        label.minimumScaleFactor = 0.7
-        label.font = .robotoMedium24()
-        return label
-    }()
-    
-    
+    private let userNameLabel = UILabel(text: "Mikhail Balakirev", font: .robotoMedium24(), textColor: .specialGray)
     
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -9,18 +9,13 @@ import UIKit
 
 class DateAndRepeatView: UIView {
     
-    let dateAndRepeatLabel = UILabel(text: "Date and Repeat", font: .robotoMedium14(), textColor: .specialLightBrown)
+    private let dateAndRepeatLabel = UILabel(text: "Date and Repeat", font: .robotoMedium14(), textColor: .specialLightBrown)
     
-    let backgroundView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .specialBrown
-        view.layer.cornerRadius = 10
-        return view
-    }()
+    private let backgroundView = BackgroundView()
     
-    let dateLabel = UILabel(text: "Date", font: .robotoMedium18(), textColor: .specialGray)
+    private let dateLabel = UILabel(text: "Date", font: .robotoMedium18(), textColor: .specialGray)
         
-    let repeatLabel = UILabel(text: "Repeat every 7 days", font: .robotoMedium18(), textColor: .specialGray)
+    private let repeatLabel = UILabel(text: "Repeat every 7 days", font: .robotoMedium18(), textColor: .specialGray)
     
     private var repeatStackView = UIStackView()
     private var dateStackView = UIStackView()
